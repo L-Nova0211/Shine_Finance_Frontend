@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter:wght@300;500&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    height: 100%;
+    background: #0d1d5f;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.app-background {
+    position: fixed;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 1250px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.app-background-1 {
+    position: absolute;
+    top: 3vw;
+    left: 10vw;
+    background: radial-gradient(circle at 20% -25%,#aa32af 0,#25b4ce 22.95%,#800597 70.4%,#b4004c 100%);
+    opacity: .3;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 2;
+    -webkit-animation-name: floating-1;
+    animation-name: floating-1;
+    -webkit-animation-duration: 150s;
+    animation-duration: 150s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.app-background-2 {
+    position: absolute;
+    bottom: -220px;
+    left: -200px;
+    background: radial-gradient(circle at 20% -25%,#aa32af 0,#25b4ce 22.95%,#800597 70.4%,#b4004c 100%);
+    opacity: .2;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    z-index: 2;
+    -webkit-animation-name: floating-2;
+    animation-name: floating-2;
+    -webkit-animation-duration: 150s;
+    animation-duration: 150s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.app-background-3 {
+    position: absolute;
+    bottom: -130px;
+    right: -150px;
+    background: radial-gradient(circle at 20% -25%,#aa32af 0,#25b4ce 22.95%,#800597 70.4%,#b4004c 100%);
+    opacity: .4;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    -webkit-filter: blur(35px);
+    filter: blur(35px);
+    z-index: 0;
+    -webkit-animation-name: floating-3;
+    animation-name: floating-3;
+    -webkit-animation-duration: 180s;
+    animation-duration: 180s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.header-item{
+    font-size: 16px;
+    border:2px solid transparent
+}
+
+.header-item:hover{
+    border-bottom:2px solid #c4c6ef
+}
+.effective-card{
+    background-color: rgba(4,7,31,.6);
+    box-shadow: 0 8px 12px 0 rgb(0 0 0 / 30%);
+    border: 1px solid hsla(0,0%,100%,.07);
+}
+
+.portfolio-title, .market-title{
+    color:#c4c6ef;
+    font-family: open sans;
+    font-size: 13px;
+    letter-spacing: 0.5;
+    font-weight: 500;
+}
+
+.usd-value{
+    font-family: open sans;
+    font-weight: 800;
+}
+
+.underline-val{
+    border-bottom: 2px solid #b08ea3;
+    padding-bottom:4px;
+}
+
+.shineInput-field{
+    width: 100%;
+    min-height: 40px;
+    background-color: transparent;
+
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.shineInput-field input {
+    width: 100%;
+    min-height: 40px;
+    
+    padding: 7px 15px;
+    padding-right:60px;
+    outline: none;
+    border-radius: 5px;
+    background-color: hsla(0,0%,100%,.1);
+    border: 1px solid transparent;
+    transition-duration: .4s;
+    color: #fff;
+    font-family: open sans;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5px;
+    gap: 5px;
+}
+
+.shineInput-btn{
+    color: hsla(0,0%,100%,.6);
+    font-family: open sans;
+    letter-spacing: 0;
+
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 0 6px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-rail {
+    height: 14px;
+    border-radius: 7px;
+    background-color: hsla(0,0%,100%,.1);
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-track {
+    border-radius: 7px 0 0 7px;
+    height: 14px;
+    color: #d81384;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-mark.MuiSlider-markActive {
+    height: 20px;
+    background-color: #d81384;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-mark {
+    height: 20px;
+    margin-top:3px;
+    color: #fff;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-markLabel {
+    top: 40px;
+    color: hsla(0,0%,100%,.6);
+    font-family: open sans;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 12px;
+    text-align: center;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-markLabelActive {
+    color: #d81384;
+    font-family: open sans;
+    font-size: 11px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb {
+    background-color: #15172a;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb .MuiSlider-valueLabel {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: -27px;
+    top: -33px!important;
+    width: 72px;
+    text-align: center;
+    height: 30px;
+    border: 2px solid hsla(0,0%,100%,.6);
+    border-radius: 15px;
+    color: #fff;
+    background-color: #15172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb .MuiSlider-valueLabel:before{
+    background:transparent;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb span span {
+    background-color: transparent;
+    transform: rotate(180deg)
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb .MuiSlider-valueLabel .jss5 {
+    width: 0;
+    height: 0;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb span span {
+    background-color: transparent;
+}
+
+.calculator .MuiSlider-colorPrimary .MuiSlider-thumb .MuiSlider-valueLabel .jss6 {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
